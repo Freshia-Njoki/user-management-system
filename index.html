@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Registration Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#add-user">Add User</a></li>
+        <li><a href="#view-users">View Users</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div id="home">
+        <h1>Welcome to User Registration Management System</h1>
+        <br />
+        <p>Please register with us by helping us fill this form:</p>
+        <br />
+      </div>
+      <div id="add-user">
+        <h1>Add User</h1>
+        <br />
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+          <label for="id-number">ID Number:</label>
+          <input type="text" id="id-number" required />
+          <label for="country">Country:</label>
+          <select name="country" id="country" required>
+            <option value="">Select country</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Egypt">Egypt</option>
+            <option value="US">US</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Tanzania">Tanzania</option>
+          </select>
+          <label for="languages">Language Spoken:</label>
+          <select name="languages" id="languages" required>
+            <option value="">select language</option>
+            <option value="English">English</option>
+            <option value="Swahili">Swahili</option>
+            <option value="Swahili">French</option>
+            <option value="Swahili">Spanish</option>
+            <option value="Swahili">Chinese</option>
+            <option value="native">native</option>
+          </select>
+          <button type="submit" onclick="addUser()">Add User</button>
+        </form>
+      </div>
+      <div id="view-users">
+        <br />
+        <h1>View Users</h1>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>ID Number</th>
+            <th>Country</th>
+            <th>Languages Spoken</th>
+            <th>Actions</th>
+          </tr>
+          <tbody id="user-list"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
