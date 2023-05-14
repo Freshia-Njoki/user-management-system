@@ -25,9 +25,15 @@
         <br />
         <form>
           <label for="name">Name:</label>
-          <input type="text" id="name" required />
+          <input type="text" id="name" placeholder="enter your Name" required />
           <label for="id-number">ID Number:</label>
-          <input type="text" id="id-number" required />
+          <input
+            type="text"
+            id="id-number"
+            required
+            pattern="[0-9]+"
+            placeholder="enter your ID number"
+          />
           <label for="country">Country:</label>
           <select name="country" id="country" required>
             <option value="">Select country</option>
